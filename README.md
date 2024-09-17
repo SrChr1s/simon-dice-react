@@ -26,10 +26,22 @@ Para instalar y ejecutar este proyecto en tu máquina local, sigue estos pasos:
    ```bash
    git clone https://github.com/tu-usuario/simon-dice.git
 
-2. Instala las dependencias del proyecto:
+2. Navega al directorio del proyecto:
+   ```bash
+   cd simon-dice
+   
+3. Instala las dependencias:
    ```bash
    npm install
    
-3. Ejecuta el proyecto con vite en un entorno local:
+4. Ejecuta el proyecto en modo desarrollo:
    ```bash
    npm run dev
+   
+El juego estará disponible en http://localhost:5173 por defecto.
+
+## Uso
+
+1. **Jugar**: Sigue la secuencia de colores que se muestra en el juego. Cada vez que completes una secuencia correctamente, la secuencia se alargará y la velocidad aumentará según el nivel de dificultad seleccionado.
+   
+2. **Ajustes**: Haz clic en el botón de ajustes en la esquina superior derecha para seleccionar el nivel de dificultad: Fácil, Medio o Difícil.
