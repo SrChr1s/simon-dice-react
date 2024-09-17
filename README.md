@@ -1,5 +1,7 @@
 # Simon Dice - Juego en React
 
+![](assets/Screenshot_2.png)
+
 ## Descripción
 
 Simon Dice es una aplicación interactiva basada en el clásico juego de Simon, donde el objetivo es seguir una secuencia de colores que se presenta de forma aleatoria. El juego incrementa la dificultad a medida que el jugador avanza, desafiando su memoria y capacidad de atención. Este proyecto está desarrollado utilizando **React**, **Vite**, **CSS** y **JSX**, y hace uso de hooks de React como `useState` y `useEffect` para gestionar el estado y los efectos secundarios.
