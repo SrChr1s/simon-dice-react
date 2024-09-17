@@ -42,6 +42,6 @@ El juego estará disponible en http://localhost:5173 por defecto.
 
 ## Uso
 
-1. **Jugar**: Sigue la secuencia de colores que se muestra en el juego. Cada vez que completes una secuencia correctamente, la secuencia se alargará y la velocidad aumentará según el nivel de dificultad seleccionado.
+1. **Jugar**: Sigue la secuencia de colores que se muestra en el juego. Cada vez que completes una secuencia correctamente, la secuencia se alargará.
    
 2. **Ajustes**: Haz clic en el botón de ajustes en la esquina superior derecha para seleccionar el nivel de dificultad: Fácil, Medio o Difícil.
