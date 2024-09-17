@@ -147,7 +147,7 @@ function SimonDice() {
         className={`ajustes ${playing ? "gaming" : ""}`}
         onClick={handleOptions}
       >
-        <img id="engranaje" src="src/assets/engranaje64.png" />
+        <img id="engranaje" src="/engranaje64.png" />
       </div>
       <Ajustes
         show={settings}
@@ -169,16 +169,16 @@ function Sleep(ms) {
 function Sonidos(c) {
   switch (c) {
     case "yellow":
-      new Audio("src/sounds/simonSound1.mp3").play();
+      new Audio("/sounds/simonSound1.mp3").play();
       break;
     case "blue":
-      new Audio("src/sounds/simonSound2.mp3").play();
+      new Audio("/sounds/simonSound2.mp3").play();
       break;
     case "red":
-      new Audio("src/sounds/simonSound3.mp3").play();
+      new Audio("/sounds/simonSound3.mp3").play();
       break;
     case "green":
-      new Audio("src/sounds/simonSound4.mp3").play();
+      new Audio("/sounds/simonSound4.mp3").play();
       break;
   }
 }
