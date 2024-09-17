@@ -1,0 +1,335 @@
+:root {
+  --bgMainColor: rgb(29, 29, 29);
+}
+
+body {
+  margin: 0;
+  color: rgb(105, 105, 105);
+  font-family: Verdana;
+}
+
+.app {
+  background-color: var(--bgMainColor);
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game {
+  width: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  padding: 4px;
+  border: 10px solid rgb(39, 39, 39);
+  border-radius: 200px;
+}
+
+.gameButton {
+  border-style: none;
+  height: 142px;
+  width: 142px;
+  margin: 4px;
+  transition-duration: 0.25s;
+  &:hover {
+    transform: scale(1.03);
+  }
+  &:active {
+    transform: scale(0.9);
+  }
+}
+
+.yellow {
+  background-color: #e3a008;
+  &.flash {
+    background-color: #fce96a;
+    box-shadow: #e3a008 0 0 120px;
+  }
+}
+
+.blue {
+  background-color: #1e429f;
+  &.flash {
+    background-color: #a4cafe;
+    box-shadow: #3f83f8 0 0 120px;
+  }
+}
+
+.red {
+  background-color: #9b1c1c;
+  &.flash {
+    background-color: #f8b4b4;
+    box-shadow: #e02424 0 0 120px;
+  }
+}
+
+.green {
+  background-color: #03543f;
+  &.flash {
+    background-color: #84e1bc;
+    box-shadow: #0e9f6e 0 0 120px;
+  }
+}
+
+.playButton {
+  background-color: rgb(212, 212, 212);
+  color: var(--bgMainColor);
+  font-size: 20px;
+  font-weight: bold;
+  border-style: solid;
+  border-color: var(--bgMainColor);
+  border-width: 8px;
+  height: 100px;
+  width: 100px;
+  border-radius: 100%;
+  position: absolute;
+  transition-duration: 0.2s;
+  &.offPlay:hover {
+    transform: scale(1.05);
+  }
+}
+
+.lostGame {
+  background-color: rgb(49, 49, 49);
+  color: rgb(212, 212, 212);
+  box-shadow: rgb(22, 22, 22) 0 1px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  width: 400px;
+  height: 250px;
+  border-radius: 50px;
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  transition-duration: 0.5s;
+  &.show {
+    visibility: visible;
+    opacity: 1;
+    transition-duration: 0.5s;
+  }
+  & > h1 {
+    margin-bottom: 0;
+  }
+  & > h2 {
+    font-size: 20px;
+    margin-bottom: 25px;
+  }
+}
+
+.lostButton {
+  background-color: white;
+  font-weight: bold;
+  font-size: 15px;
+  width: 85px;
+  height: 40px;
+  border-radius: 30px;
+  border-style: none;
+  &:hover {
+    color: white;
+    background-color: darkred;
+    transition-duration: 0.3s;
+  }
+}
+
+.lostButton.retryButton {
+  margin-left: 25px;
+  width: 95px;
+  &:hover {
+    color: white;
+    background-color: darkgreen;
+    transition-duration: 0.3s;
+  }
+}
+
+.ajustes {
+  position: sticky;
+  background-color: rgb(70, 70, 70);
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  margin-left: 70vw;
+  margin-top: 80vh;
+  opacity: 1;
+  transition-duration: 0.2s;
+  &:hover {
+    transform: scale(1.05);
+  }
+  &:active {
+    transform: scale(0.9);
+  }
+  &.gaming {
+    opacity: 0;
+  }
+}
+
+.settings {
+  background-color: rgb(49, 49, 49);
+  color: rgb(212, 212, 212);
+  box-shadow: rgb(22, 22, 22) 0 1px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  width: 400px;
+  height: 250px;
+  border-radius: 50px;
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  transition-duration: 0.5s;
+  &.show {
+    visibility: visible;
+    opacity: 1;
+    transition-duration: 0.5s;
+  }
+  & > h1 {
+    font-size: 40px;
+  }
+  & button {
+    background-color: white;
+    font-weight: bold;
+    font-size: 15px;
+    width: 85px;
+    height: 40px;
+    border-radius: 30px;
+    border-style: none;
+    margin: 0 6px 0 6px;
+    &.easy.selected {
+      background-color: darkgreen;
+    }
+    &.medium.selected {
+      background-color: darkorange;
+    }
+    &.hard.selected {
+      background-color: darkred;
+    }
+    &.selected {
+      color: white;
+    }
+    &:hover {
+      color: white;
+      transition-duration: 0.3s;
+    }
+    &.easy:hover {
+      background-color: darkgreen;
+    }
+    &.medium:hover {
+      background-color: darkorange;
+    }
+    &.hard:hover {
+      background-color: darkred;
+    }
+    &:active {
+      transform: scale(0.8);
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .lostGame {
+    width: 500px;
+    & > h1 {
+      margin: 0;
+    }
+  }
+
+  .game {
+    width: 380px;
+  }
+
+  .gameButton {
+    height: 180px;
+    width: 180px;
+  }
+
+  .playButton {
+    height: 130px;
+    width: 130px;
+    font-size: 25px;
+  }
+
+  .lostBotonera {
+    margin-top: 0;
+  }
+
+  .ajustes {
+    margin-left: 90vw;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .lostGame {
+    width: 160px;
+    height: 110px;
+    font-size: 8px;
+    border-radius: 30px;
+    & > h1 {
+      margin-bottom: 0;
+    }
+    & > h2 {
+      font-size: 7px;
+    }
+  }
+
+  .lostBotonera {
+    margin-top: 5px;
+  }
+
+  .lostButton {
+    width: 45px;
+    height: 25px;
+    font-size: 8px;
+  }
+
+  .lostButton.retryButton {
+    width: 55px;
+    margin-left: 4px;
+  }
+
+  .game {
+    width: 160px;
+    border: 5px solid rgb(39, 39, 39);
+    border-radius: 100px;
+    padding: 2px;
+  }
+
+  .gameButton {
+    height: 70px;
+    width: 70px;
+  }
+
+  .playButton {
+    height: 48px;
+    width: 48px;
+    font-size: 8px;
+  }
+
+  .ajustes {
+    margin-left: 60vw;
+  }
+
+  .settings {
+    height: 110px;
+    width: 220px;
+    & > h1 {
+      font-size: 15px;
+    }
+    & button {
+      width: 45px;
+      height: 25px;
+      font-size: 10px;
+    }
+  }
+}
