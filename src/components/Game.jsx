@@ -151,9 +151,15 @@ function SimonDice() {
       </div>
       <Ajustes
         show={settings}
-        easy={() => (setDificulty(400), setDifSelected("easy"))}
-        medium={() => (setDificulty(250), setDifSelected("medium"))}
-        hard={() => (setDificulty(100), setDifSelected("hard"))}
+        easy={() => (
+          setDificulty(400), setDifSelected("easy"), setSettings(false)
+        )}
+        medium={() => (
+          setDificulty(250), setDifSelected("medium"), setSettings(false)
+        )}
+        hard={() => (
+          setDificulty(100), setDifSelected("hard"), setSettings(false)
+        )}
         selected={difSelected}
       />
     </main>

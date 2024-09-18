@@ -188,11 +188,11 @@ body {
   position: fixed;
   visibility: hidden;
   opacity: 0;
-  transition-duration: 0.5s;
+  transition-duration: 0.8s;
   &.show {
     visibility: visible;
     opacity: 1;
-    transition-duration: 0.5s;
+    transition-duration: 0.8s;
   }
   & > h1 {
     font-size: 40px;
